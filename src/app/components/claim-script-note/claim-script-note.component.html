@@ -1,0 +1,24 @@
+  <div class="row invoice-info">
+        <div class="col-sm-12 invoice-col">
+          <div class="table-responsive">
+            <table class="table no-margin table-striped">
+              <thead>
+              <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>By</th>
+                <th>Notes</th>
+              </tr>
+              </thead>
+              <tbody  *ngIf="claimManager.selectedClaim">
+              <tr *ngFor="let pNotes of claimManager.selectedClaim.prescriptionNotes">
+                <td>{{pNotes.date  | date:"shortDate"}}</td>
+                <td>{{pNotes.type}}</td>
+                <td>{{pNotes.enteredBy}}</td>
+                <td>{{pNotes.note}}</td>               
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  </div>

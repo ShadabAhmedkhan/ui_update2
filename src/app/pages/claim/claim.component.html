@@ -1,0 +1,161 @@
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="box">
+            <div class="box-header with-border"><h3 class="box-title">Bridgeport Claims</h3></div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-sm-12"   id="accordion">
+                            <app-claim-search></app-claim-search>
+                    </div>
+                </div>
+                <div class="row data" [class.fittoSreen]="claimManager.selected && !expanded">
+                    <div [class.col-sm-5]="!expanded"  [class.col-sm-12]="expanded && (expandedBlade==1 || expandedBlade==2 || expandedBlade==3)" *ngIf="!expanded || (expandedBlade==1 || expandedBlade==2 || expandedBlade==3)"  style="padding-right:0px;">
+                          <div class="panel panel-primary">
+      <div class="panel-heading" *ngIf="(!expanded && expandedBlade==0) || expandedBlade==1">
+
+                   
+                            <span> <img [src]="'assets/img/bridgeportFinal/iconClaims.png'" class="img-square" [alt]="userName"> </span>Claims
+                            <div class="box-tools box-tools-style pull-right">
+                                        <button type="button" *ngIf="expanded" class="btn btn-flat bg-back-ground btn-sm" (click)="minimize()"   title="Minimize"><i class="fa fa-minus"></i></button>
+                                        <button type="button" *ngIf="!expanded" class="btn btn-flat bg-back-ground btn-sm" (click)="expand(true,1)"   title="Expand blade"><i class="fa fa-expand"></i></button>
+                            </div>
+      </div>
+                            <div class="box-body claims">
+
+                                <app-claim-result [expand]="expand" [minimize]="minimize"></app-claim-result>
+                            </div>
+                        </div>
+                               
+                        <div class="panel Notes" *ngIf="(claimManager.selected && expandedBlade==0) || expandedBlade==2">                    
+                                <div class="panel-heading"><span> <img [src]="'assets/img/bridgeportFinal/iconnotes.png'" class="img-square" [alt]="userName"> </span>Notes
+                                
+                                <div class="box-tools box-tools-style-Notes pull-right " *ngIf="claimManager.selectedClaim && !claimManager.selectedClaim.editing">
+                                    <!--<div class="btn-group" data-toggle="btn-toggle">                            
+                                        <button type="button" class="btn btn-flat bg-back-ground btn-sm" (click)="addNote()" *ngIf="!claimManager.selectedClaim.claimNotes">Add New</button>                                
+                                        <button type="button" class="btn btn-flat bg-back-ground btn-sm" (click)="addNote(claimManager.selectedClaim.claimNote.noteText,claimManager.selectedClaim.claimNote.noteType)" *ngIf="claimManager.selectedClaim.claimNotes"   title="Edit Note">Edit</button>
+                                    </div>-->
+                                        <button type="button" *ngIf="expanded" class="btn btn-flat bg-bg-back-ground-Notes btn-sm" (click)="minimize()"   title="Minimize"><i class="fa fa-minus"></i></button>
+                                    <button type="button" *ngIf="!expanded" class="btn btn-flat bg-back-ground-Notes btn-sm" (click)="expand(true,2)"   title="Expand blade"><i class="fa fa-expand"></i></button>
+                                    &nbsp;&nbsp;&nbsp;
+                                </div>   
+                                </div>                    
+                            <div class="box-body-Notes">
+                                <app-claim-note></app-claim-note>
+                            </div>
+                                            <div class="box-footer">
+                                <div class="btn-group">
+                                    <button class="btn shadab-css-btn-Notes btn-flat btn-small btn-block left" type="button" (click)="addPrescriptionNote()">Button text</button>
+                                </div>
+
+                            </div>
+                        </div>
+    
+       
+                        <div class="panel Episodes" *ngIf="(claimManager.selected  && expandedBlade==0) || expandedBlade==3">                            
+                                <div class="panel-heading"> <span> 
+          <img [src]="'assets/img/bridgeportFinal/iconepisodes.png'" class="ico-size img-square" [alt]="userName">
+           </span>Episodes
+                                <div class="box-tools pull-right  box-tools-style-Episodes">
+                                    <!--<div class="btn-group" data-toggle="btn-toggle">                            
+                                        <button type="button" class="btn btn-flat bg-purple btn-sm"   title="New Episode" (click)="episode()">Button text</button>                                
+                                    </div>-->
+                                        <button type="button" *ngIf="expanded" class="btn btn-flat bg-back-ground-Episodes btn-sm" (click)="minimize()"   title="Minimize"><i class="fa fa-minus"></i></button>
+                                    <button type="button" *ngIf="!expanded" class="btn btn-flat bg-back-ground-Episodes btn-sm" (click)="expand(true,3)"   title="Expand blade"><i class="fa fa-expand"></i></button>
+                                    &nbsp;&nbsp;&nbsp;
+                                </div>
+                                </div>
+                        
+                            <div class="box-body-Episodes">
+                                <app-claim-episode></app-claim-episode>
+                            </div>
+            <div class="box-footer">
+           <div class="btn-group">
+        <button class="btn shadab-css-btn-Episodes btn-flat btn-small btn-block left" type="button" (click)="addPrescriptionNote()">Button text</button>
+  </div>
+
+                            </div>
+                    </div>
+                    </div>
+                    <div [class.col-sm-7]="!expanded"  [class.col-sm-12]="expanded && (expandedBlade==4 || expandedBlade==5 || expandedBlade==6 || expandedBlade==7)" *ngIf="!expanded || (expandedBlade==4 || expandedBlade==5 || expandedBlade==6 || expandedBlade==7)" style="padding-left:0px;">
+                        <div class="panel Prescriptions1" *ngIf="(claimManager.selected && expandedBlade==0) || expandedBlade==4">                            
+                                     <div class="panel-heading"> <span> 
+          <img [src]="'assets/img/bridgeportFinal/iconPrescriptions.png'" class="ico-size img-square" [alt]="userName">
+           </span>Prescriptions
+                                <div class="box-tools pull-right  box-tools-style-Prescript">
+                                        <button type="button" *ngIf="expanded" class="btn btn-flat bg-back-ground-Prescript btn-sm" (click)="minimize()"   title="Minimize"><i class="fa fa-minus"></i></button>
+                                        <button type="button" *ngIf="!expanded" class="btn btn-flat bg-back-ground-Prescript btn-sm" (click)="expand(true,4)"   title="Expand blade"><i class="fa fa-expand"></i></button>
+                                </div>
+                            </div>
+                            <div class="box-body-Prescriptions">
+                                <app-claim-prescriptions></app-claim-prescriptions>
+                            </div>
+                            <div class="box-footer">
+                                <div class="btn-group">
+                                    <button class="btn shadab-css-btn-Prescriptions1 btn-flat btn-small btn-block left" type="button" (click)="addPrescriptionNote()">Button text</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="panel Script" *ngIf="(claimManager.selected && expandedBlade==0) || expandedBlade==5">                            
+                                           <div class="panel-heading"> <span> 
+          <img [src]="'assets/img/bridgeportFinal/iconScripts.png'" class="ico-size img-square" [alt]="userName">
+           </span>Script Notes 
+                                <div class="box-tools pull-right  box-tools-style-Script">
+                                        <button type="button" *ngIf="expanded" class="btn btn-flat bg-back-ground-Script btn-sm" (click)="minimize()"   title="Minimize"><i class="fa fa-minus"></i></button>
+                                        <button type="button" *ngIf="!expanded" class="btn btn-flat bg-back-ground-Script btn-sm" (click)="expand(true,5)"   title="Expand blade"><i class="fa fa-expand"></i></button>
+                                </div>
+                            </div>
+                            <div class="box-body-Script">
+                                <app-claim-script-note></app-claim-script-note>
+                            </div>
+                                <div class="box-footer">
+                                <div class="btn-group">
+                                    <button class="btn shadab-css-btn-Script btn-flat btn-small btn-block left" type="button" (click)="addPrescriptionNote()">Button text</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel Payments" *ngIf="(claimManager.selected && expandedBlade==0) || expandedBlade==6">                            
+                                                   <div class="panel-heading"> <span> 
+          <img [src]="'assets/img/bridgeportFinal/iconpayments.png'" class="ico-size img-square" [alt]="userName">
+           </span>Payments
+                                <div class="box-tools pull-right  box-tools-style-Payments">
+                                        <button type="button" *ngIf="expanded" class="btn btn-flat bg-back-ground-Payments btn-sm" (click)="minimize()"   title="Minimize"><i class="fa fa-minus"></i></button>
+                                        <button type="button" *ngIf="!expanded" class="btn btn-flat bg-back-ground-Payments btn-sm" (click)="expand(true,6)"   title="Expand blade"><i class="fa fa-expand"></i></button>
+                                </div>
+                            </div>
+                            <div class="box-body-Payments">
+                                <app-claim-payment></app-claim-payment>
+                            </div>
+                                <div class="box-footer">
+                                <div class="btn-group">
+                                    <button class="btn shadab-css-btn-Payments btn-flat btn-small btn-block left" type="button" (click)="addPrescriptionNote()">Button text</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel Images" *ngIf="(claimManager.selected && expandedBlade==0) || expandedBlade==7">
+                                       <div class="panel-heading"> <span> 
+          <img [src]="'assets/img/bridgeportFinal/iconImages.png'" class="ico-size img-square" [alt]="userName">
+           </span>Images
+                                <div class="box-tools pull-right  box-tools-style-Images">
+                                        <button type="button" *ngIf="expanded" class="btn btn-flat bg-back-ground-Images btn-sm" (click)="minimize()"   title="Minimize"><i class="fa fa-minus"></i></button>
+                                        <button type="button" *ngIf="!expanded" class="btn btn-flat bg-back-ground-Images btn-sm" (click)="expand(true,7)"   title="Expand blade"><i class="fa fa-expand"></i></button>
+                                </div>
+                            </div>
+                            <div class="box-body-Images">
+                                <app-claim-images></app-claim-images>
+                            </div>
+                                <div class="box-footer">
+                                <div class="btn-group">
+                                    <button class="btn shadab-css-btn-Images btn-flat btn-small btn-block left" type="button" (click)="addPrescriptionNote()">Button text</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="overlay" *ngIf="claimManager.loading" style="text-align:center;">
+                <img src="assets/1.gif">
+            </div> 
+        </div>
+    </div>
+ </div>

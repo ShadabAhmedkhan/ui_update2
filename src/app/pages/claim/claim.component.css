@@ -1,0 +1,247 @@
+.row.data{
+    font-size:9.6pt;
+}
+.row.data .box{
+    margin-bottom:0px;
+}
+.box{
+    border:1.5px solid #d2d6de;
+}
+.box .box-body{
+    overflow-x: hidden;
+}
+td,th{
+    padding-bottom:1px !important;
+    padding-top:1px !important;
+}
+.fittoSreen .box-body{
+    height:180px;
+    overflow-y: scroll;
+}
+.fittoSreen .box-body.claims[_ngcontent-c3] {
+    height: 250px;
+    background-color: #fcefdf;
+}
+.fittoSreen .box-body.claims{
+    height:250px;
+}
+.shadab-css-btn{
+    float: right;
+    display: block;
+    border-radius: 0px;
+        background-color: #9a2629;
+        border-color: #fff;
+
+}
+    .panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #9a2629;
+border-color: #fff; }
+.box-tools-style{ 
+       margin-top: -6px;
+  }
+  .bg-back-ground{
+    background-color: #9a2629;
+            margin-right:-15px;
+
+  }.ico-size[_ngcontent-c8] {
+    height: 25px;
+}.panel-primary {
+    border-color: #fff;
+}
+
+.fittoSreen .box-body-Prescriptions {
+    height: 180px;
+    overflow-y: scroll;
+    background-color: #eaf2fd;
+}
+.shadab-css-btn-Prescriptions1{
+    float: right;
+    display: block;
+    border-radius: 0px;
+        background-color: #2c367e;
+        border-color: #fff;
+    color: #fff;
+
+}
+    .Prescriptions1 >.panel-heading {
+    color: #fff;
+    background-color: #2c367e;
+border-color: #fff; }
+.box-tools-style-Prescript{ 
+       margin-top: -6px;
+  }
+  .bg-back-ground-Prescript{
+    background-color: #2c367e;
+            margin-right:-15px;
+
+  }.ico-size[_ngcontent-c8] {
+    height: 25px;
+}.Prescriptions1 {
+    border-color: #fff;
+}
+
+.fittoSreen .box-body-Notes {
+    height: 180px;
+    overflow-y: scroll;
+    background-color: #e5e5e5;
+}
+
+.shadab-css-btn-Notes{
+    float: right;
+    display: block;
+    border-radius: 0px;
+        background-color: #296c8e;
+        border-color: #fff;
+    color: #fff;
+
+}
+    .Notes >.panel-heading {
+    color: #fff;
+    background-color: #296c8e;
+border-color: #fff; }
+.box-tools-style-Notes{ 
+       margin-top: -6px;
+  }
+  .bg-back-ground-Notes{
+    background-color: #296c8e;
+            margin-right:-15px;
+
+  }.ico-size[_ngcontent-c8] {
+    height: 25px;
+}.Notes {
+    border-color: #fff;
+}
+.fittoSreen .box-body-Script {
+    height: 180px;
+    overflow-y: scroll;
+    background-color: #f0e0fa;
+}
+
+.shadab-css-btn-Script{
+    float: right;
+    display: block;
+    border-radius: 0px;
+        background-color: #93367e;
+        border-color: #fff;
+    color: #fff;
+
+}
+    .Script >.panel-heading {
+    color: #fff;
+    background-color: #93367e;
+border-color: #fff; }
+.box-tools-style-Script{ 
+       margin-top: -6px;
+  }
+  .bg-back-ground-Script{
+    background-color: #93367e;
+            margin-right:-15px;
+    color: #fff;
+
+  }.ico-size[_ngcontent-c8] {
+    height: 25px;
+}.Script {
+    border-color: #fff;
+}
+
+
+.fittoSreen .box-body-Episodes {
+    height: 180px;
+    overflow-y: scroll;
+    background-color: #dce9f1;
+}
+
+.shadab-css-btn-Episodes{
+    float: right;
+    display: block;
+    border-radius: 0px;
+        background-color: #2a6d90;
+        border-color: #fff;
+    color: #fff;
+
+}
+    .Episodes >.panel-heading {
+    color: #fff;
+    background-color: #2a6d90;
+border-color: #fff; }
+.box-tools-style-Episodes{ 
+       margin-top: -6px;
+  }
+  .bg-back-ground-Episodes{
+    background-color: #2a6d90;
+            margin-right:-15px;
+    color: #fff;
+
+  }.ico-size[_ngcontent-c8] {
+    height: 25px;
+}.Episodes {
+    border-color: #fff;
+}
+
+
+.fittoSreen .box-body-Payments {
+    height: 180px;
+    overflow-y: scroll;
+    background-color: #d9f2df;
+}
+
+.shadab-css-btn-Payments{
+    float: right;
+    display: block;
+    border-radius: 0px;
+        background-color: #2f6f3e;
+        border-color: #fff;
+    color: #fff;
+
+}
+    .Payments >.panel-heading {
+    color: #fff;
+    background-color: #2f6f3e;
+border-color: #fff; }
+.box-tools-style-Payments{ 
+       margin-top: -6px;
+  }
+  .bg-back-ground-Payments{
+    background-color: #2f6f3e;
+            margin-right:-15px;
+    color: #fff;
+
+  }.ico-size[_ngcontent-c8] {
+    height: 25px;
+}.Payments {
+    border-color: #fff;
+}
+
+.fittoSreen .box-body-Images {
+    height: 180px;
+    overflow-y: scroll;
+    background-color: #f8e8d1;
+}
+
+.shadab-css-btn-Images{
+    float: right;
+    display: block;
+    border-radius: 0px;
+        background-color: #a16921;
+        border-color: #fff;
+    color: #fff;
+
+}
+    .Images >.panel-heading {
+    color: #fff;
+    background-color: #a16921;
+border-color: #fff; }
+.box-tools-style-Images{ 
+       margin-top: -6px;
+  }
+  .bg-back-ground-Images{
+    background-color: #a16921;
+            margin-right:-15px;
+    color: #fff;
+
+  }.ico-size[_ngcontent-c8] {
+    height: 25px;
+}.Images {
+    border-color: #fff;
+}
